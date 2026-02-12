@@ -1,0 +1,15 @@
+Git Learner Guide (Doc Summary)
+
+This repository is organized as lab exercises for Mac + GitHub.
+
+Basic:
+- Mac setup and Git configuration
+- New repository creation and first push
+- Sync local when files are changed from GitHub UI
+
+Advanced:
+- Feature branch and rebase workflow
+- Conflict simulation and resolution
+
+Scenarios:
+- Common Git mistakes and quick recovery commands

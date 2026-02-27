@@ -1,10 +1,24 @@
-# Git Learner Lab (Mac Local + GitHub)
+# Git Learner Lab + Pulsebook Demo
 
-A practical, lab-based repository to learn Git from zero to advanced level.
+A practical repository for learning Git, now with a modern social-media web demo inspired by current trends.
 
-Repository target used in labs:
-- GitHub URL: `https://github.com/iamkaushiksaha/github`
-- Git clone URL: `https://github.com/iamkaushiksaha/github.git`
+## New: Pulsebook (Facebook-inspired social media UI)
+
+This project now includes a responsive front-end social media experience with:
+- Sticky top navigation
+- Story rail and post feed
+- Composer for creating posts dynamically
+- AI idea assistant mock feature
+- Dark/light theme toggle
+- Trend and online friend side panels
+
+## Run locally
+
+```bash
+python3 -m http.server 4173
+```
+
+Then open `http://localhost:4173`.
 
 ## Learning Tracks
 
@@ -21,35 +35,3 @@ Repository target used in labs:
 
 3. **Scenarios (Common Issues)**
    - Real mistakes and quick recovery commands
-
-## Repository Layout
-
-```text
-.
-├── README.md
-└── docs
-    ├── basic
-    │   ├── 01-setup-mac.md
-    │   ├── 02-new-repo-and-initial-steps.md
-    │   └── 03-sync-after-github-ui-change.md
-    ├── advanced
-    │   ├── 01-feature-branch-rebase-lab.md
-    │   └── 02-conflict-lab.md
-    ├── scenarios
-    │   └── common-issues.md
-    └── git-learner-guide.doc
-```
-
-## Suggested Order
-
-- Start: `docs/basic/01-setup-mac.md`
-- Then: `docs/basic/02-new-repo-and-initial-steps.md`
-- Then: `docs/basic/03-sync-after-github-ui-change.md`
-- Continue with advanced labs
-- Use scenarios as daily troubleshooting reference
-
-## Lab Rules
-
-- Run commands yourself (do not just read).
-- After each lab, verify with `git status` and `git log --oneline -5`.
-- Keep commits small and meaningful.

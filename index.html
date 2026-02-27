@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pulsebook — Next Social</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar glass">
+        <div class="brand">Pulsebook</div>
+        <div class="search-wrap">
+          <input type="search" placeholder="Search creators, communities, trends" />
+        </div>
+        <div class="top-actions">
+          <button class="icon-btn" title="Messages">💬</button>
+          <button class="icon-btn" title="Notifications">🔔</button>
+          <button class="icon-btn" id="theme-toggle" title="Toggle theme">🌙</button>
+          <button class="avatar-btn" title="Profile">KS</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <aside class="sidebar left glass">
+          <h3>Menu</h3>
+          <ul>
+            <li>🏠 Home</li>
+            <li>🎬 Reels</li>
+            <li>🛍 Marketplace</li>
+            <li>👥 Groups</li>
+            <li>🧠 AI Copilot</li>
+          </ul>
+          <div class="trend-card">
+            <h4>Trending now</h4>
+            <p>#BuildInPublic</p>
+            <p>#CreatorEconomy</p>
+            <p>#AIStudio</p>
+          </div>
+        </aside>
+
+        <section class="feed">
+          <article class="composer glass">
+            <h2>Create Post</h2>
+            <textarea id="post-input" placeholder="What is happening in your world?"></textarea>
+            <div class="composer-actions">
+              <button class="chip">📸 Photo</button>
+              <button class="chip">🎥 Live</button>
+              <button class="chip">🗳 Poll</button>
+              <button class="post-btn" id="post-btn">Post</button>
+            </div>
+          </article>
+
+          <section class="stories glass">
+            <h3>Stories</h3>
+            <div class="story-row">
+              <div class="story">+ Your Story</div>
+              <div class="story">Alex • Surf Vlog</div>
+              <div class="story">Mia • Product Launch</div>
+              <div class="story">Sam • City Walk</div>
+            </div>
+          </section>
+
+          <section id="posts" class="posts">
+            <article class="post glass">
+              <header>
+                <strong>Nova Collective</strong>
+                <span>• 2h</span>
+              </header>
+              <p>
+                We just launched our AI-powered community studio for creators. Build, stream,
+                and monetize in one place.
+              </p>
+              <div class="post-media gradient"></div>
+              <footer>
+                <button class="react-btn">👍 Like <span>124</span></button>
+                <button class="react-btn">💬 Comment <span>18</span></button>
+                <button class="react-btn">↗ Share <span>9</span></button>
+              </footer>
+            </article>
+          </section>
+        </section>
+
+        <aside class="sidebar right glass">
+          <h3>Online Friends</h3>
+          <ul class="friends">
+            <li><span class="dot"></span> Riya</li>
+            <li><span class="dot"></span> Dev</li>
+            <li><span class="dot"></span> Ana</li>
+            <li><span class="dot"></span> Zaid</li>
+          </ul>
+
+          <div class="ai-card">
+            <h4>AI Feed Assistant</h4>
+            <p>Try: “Generate a launch announcement with emojis”</p>
+            <button id="ai-btn">Generate idea</button>
+            <p id="ai-output"></p>
+          </div>
+        </aside>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

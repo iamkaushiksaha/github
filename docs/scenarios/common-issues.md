@@ -69,6 +69,48 @@ git pull origin main
 git pull --rebase origin main
 ```
 
+## 10) Wrong PR merged into `main`
+
+### Recovery Diagram
+
+```mermaid
+flowchart TD
+    A[Wrong PR merged to main] --> B[Open merged PR]
+    B --> C{Revert button available?}
+    C -->|Yes| D[Create revert PR]
+    D --> E[Review revert diff]
+    E --> F[Merge revert PR]
+    C -->|No| G[Use local git revert]
+    G --> H[git revert -m 1 merge_commit_hash]
+    H --> I[Push and open PR if needed]
+```
+
+### GitHub UI recovery
+1. Open the merged pull request.
+2. Click **Revert**.
+3. Let GitHub create a revert branch and revert PR.
+4. Review the changed files.
+5. Merge the revert PR into `main`.
+
+### Local Git recovery
+```bash
+git checkout main
+git pull origin main
+git revert -m 1 <merge_commit_hash>
+git push origin main
+```
+
+> Use the merge commit hash of the wrong PR, not just an inner commit from the feature branch.
+
+## 11) Wrong project or unrelated app code added to repo
+
+If the repository is meant for documentation or learning content, check:
+- Did the PR add unrelated files like app frontend code?
+- Did README purpose change unexpectedly?
+- Did docs disappear or get replaced?
+
+If yes, revert the PR instead of trying random manual edits.
+
 ## Practice routine
 
 1. Create branch
@@ -76,3 +118,4 @@ git pull --rebase origin main
 3. Pull with rebase
 4. Resolve conflicts
 5. Push and open PR
+6. Review diff before merging
